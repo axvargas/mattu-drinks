@@ -89,6 +89,7 @@ const Form = () => {
 
                                 endAdornment={
                                     <InputAdornment position="end">
+
                                         <IconButton
 
                                             aria-label="clear"
@@ -96,6 +97,7 @@ const Form = () => {
                                         >
                                             <ClearIcon fontSize="small" />
                                         </IconButton>
+
                                     </InputAdornment>
                                 }
                             />

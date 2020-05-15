@@ -7,7 +7,7 @@ import {
     IconButton,
     Grid,
     Typography,
-
+    Tooltip
 } from '@material-ui/core';
 
 
@@ -51,15 +51,11 @@ const Drink = ({ drink }) => {
                             title={<Typography className={classes.typo}>{strDrink}</Typography>}
 
                             actionIcon={
-                                // <Link
-                                //     href={image.largeImageURL}
-                                //     target="_blank"
-                                //     rel="noopener noreferrer"
-                                // >
-                                <IconButton aria-label={`goto recipe`} className={classes.icon} onClick={handleOpen}>
-                                    <OpenInBrowserIcon />
-                                </IconButton>
-                                // </Link>
+                                <Tooltip disableFocusListener disableTouchListener title="Open Recipe">
+                                    <IconButton aria-label={`goto recipe`} className={classes.icon} onClick={handleOpen}>
+                                        <OpenInBrowserIcon />
+                                    </IconButton>
+                                </Tooltip>
                             }
 
                         />

@@ -12,8 +12,7 @@ const useStyles = makeStyles((theme) => ({
     typo: {
         fontFamily: "'Lato', sans-serif",
 
-    }
-
+    },
 
 }));
 
