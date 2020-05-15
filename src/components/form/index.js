@@ -25,7 +25,7 @@ const Form = () => {
     // State
     const [ingredient, setIngredient] = useState('');
     const [errorIngredient, setErrorIngredient] = useState(false);
-    const [helperIngredient, setHelperIngredient] = useState('');
+    const [helperIngredient, setHelperIngredient] = useState('Ex. Vodka, Rum, Wine');
     const [error, setError] = useState(false);
     const [helper, setHelper] = useState('');
 
@@ -61,11 +61,11 @@ const Form = () => {
     const handleChangeIngredient = (event) => {
         setIngredient(event.target.value);
         setErrorIngredient(false);
-        setHelperIngredient('')
+        setHelperIngredient('Ex. Vodka, Rum, Wine')
     }
     const handleClear = (event) => {
         event.preventDefault();
-        setIngredient('');
+        setHelperIngredient('Ex. Vodka, Rum, Wine')
     }
     return (
         <ThemeProvider theme={theme}>
@@ -86,7 +86,7 @@ const Form = () => {
                                 onChange={handleChangeIngredient}
                                 error={errorIngredient}
                                 autoComplete='off'
-                                
+
                                 endAdornment={
                                     <InputAdornment position="end">
                                         <IconButton
@@ -99,7 +99,7 @@ const Form = () => {
                                     </InputAdornment>
                                 }
                             />
-                            <FormHelperText error>{helperIngredient}</FormHelperText>
+                            <FormHelperText error={errorIngredient}>{helperIngredient}</FormHelperText>
                         </FormControl>
 
                     </Grid>
