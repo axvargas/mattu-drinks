@@ -12,7 +12,8 @@ import {
 
 
 import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
-import TransitionsModal from '../modalDrink';
+
+import ResponsiveDialog from '../dialogDrink';
 // Context
 import { ModalContext } from '../../context/modal';
 
@@ -63,7 +64,7 @@ const Drink = ({ drink }) => {
                 </GridList>
             </Grid>
             {open &&
-                <TransitionsModal open={open} handleClose={handleClose} recipe={recipe} />
+                <ResponsiveDialog open={open} handleClose={handleClose} recipe={recipe} />
             }
 
         </Fragment>
